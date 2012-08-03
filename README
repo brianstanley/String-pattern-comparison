@@ -1,1 +1,29 @@
-testing
+String Pattern Comparison
+--------------------------
+Author: Brian Stanley
+-----------------------
+
+This script built in PHP can compare an string with a pattern and return the similarities results.
+
+For example.
+You pass the next array for the comparisson:
+$compare=array("drink?","eat","food","cars");
+And the pattern is:
+$pattern = "Cars";
+the script will return the next output.
+Word: drink? | Pattern: cars
+
+Final result: 62.5% possibilities
+
+Word: eat | Pattern: cars
+
+Final result: 50% possibilities
+
+Word: food | Pattern: cars
+
+Final result: 50% possibilities
+
+Word: cars | Pattern: cars
+
+Final result: 100% possibilities
+
