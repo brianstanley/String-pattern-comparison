@@ -84,13 +84,13 @@ class Analysis{
 			}	
 		}
 		$valorLetra = $this->getLetterValue($this->patronLen); 
-		echo "Palabra: <b>".$this->busqueda."</b> | Patron: <b>".$this->patron."</b><br>";
+		echo "Word: <b>".$this->busqueda."</b> | Pattern: <b>".$this->patron."</b><br>";
 		echo "<br>";
 
-		echo "Resultado final: ";
+		echo "Final result: ";
 		$rfinal = $coincidences*$valorLetra+$this->comparison($this->busquedaLen,$this->patronLen);
 		$rfinal = $rfinal/2;
-		echo $rfinal."% de posibilidades";
+		echo $rfinal."% possibilities";
 		echo "<br>";
 		echo "<br>";
 	}
@@ -98,9 +98,9 @@ class Analysis{
 
 }
 /* End class analysis */
-$busqueda=array("bebo?","como?","como","comunidades");
+$compare=array("drink?","eat","food","cars");
 //$busqueda = "comunity";
-$pattern = "comunity";
-$analisis = new Analysis($busqueda,$pattern);
+$pattern = "cars";
+$analisis = new Analysis($compare,$pattern);
 $analisis->starter();
 ?>
