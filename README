@@ -1,5 +1,10 @@
 String Pattern Comparison
+--------------------------
+Author: Brian Stanley
+-----------------------
+
 This script built in PHP can compare an string with a pattern and return the similarities results.
+
 For example.
 You pass the next array for the comparisson:
 $compare=array("drink?","eat","food","cars");
