@@ -16,18 +16,18 @@ class Analysis{
 	public $busquedaLen;
 	public $patronLen;
 /* start methods */	
-	function __construct($busqueda,$pattern){
-		/*Assing values to propierties */
+	public function __construct($busqueda,$pattern){
 		$this->patron=$pattern;
-		/*Here i delete blank spaces if passed an array with comparison values */
 		if(is_array($busqueda)):
 			array_walk($busqueda, array($this,'trimPalabras'));
 		endif;
 		$this->busqueda=$busqueda;
-			
+		$this->starter();	
 	}
 	function trimPalabras(&$value){ 
 	    $value = trim($value); 
+	    $value = str_replace(' ','',$value);
+	    return true;	
 	}
 
 	function starter(){
@@ -98,9 +98,8 @@ class Analysis{
 
 }
 /* End class analysis */
-$compare=array("drink?","eat","food","cars");
+$compare=array("drink ? s","eat","food","cars");
 //$busqueda = "comunity";
 $pattern = "cars";
 $analisis = new Analysis($compare,$pattern);
-$analisis->starter();
 ?>
